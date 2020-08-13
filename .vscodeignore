@@ -13,5 +13,7 @@ vti
 **/*.map
 **/tsconfig.json
 **/tslint.json
+**/*.ts
+!file.ts
 
 .vsix

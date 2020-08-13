@@ -178,5 +178,8 @@ function getLanguageIdFromLangAttr(lang: string): LanguageId {
   if (languageIdFromType === 'ts') {
     languageIdFromType = 'typescript';
   }
+  if (languageIdFromType === 'wxml') {
+    languageIdFromType = 'vue-html';
+  }
   return languageIdFromType as LanguageId;
 }
