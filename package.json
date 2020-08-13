@@ -8,6 +8,9 @@
   "publisher": "jjguodong",
   "preview": true,
   "scripts": {
+    "postinstall": "run-s install:*",
+    "install:server": "cd server && yarn",
+    "install:vti": "cd vti && yarn",
     "build:grammar": "tsc -p . && node dist/scripts/build_grammar",
     "compile": "run-s compile:source copy:snippets",
     "compile:source": "tsc -b .",
@@ -27,8 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test:server"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
